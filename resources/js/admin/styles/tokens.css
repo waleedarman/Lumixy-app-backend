@@ -1,0 +1,145 @@
+:root {
+  color-scheme: light;
+
+  --font-sans: "Cairo", system-ui, sans-serif;
+
+  --font-size-base: 15px;
+  --font-size-body: 15px;
+  --font-size-page-title: 30px;
+  --font-size-section: 19px;
+  --font-size-table: 14px;
+  --font-size-label: 14px;
+  --font-size-sidebar: 15px;
+  --font-size-small: 13px;
+  --font-size-caption: 13px;
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-soft: #eff6ff;
+  --primary-border: rgba(37, 99, 235, 0.22);
+  --primary-ring: rgba(37, 99, 235, 0.16);
+
+  --bg-app: #eef1f6;
+  --bg-subtle: #e8ecf2;
+  --surface: #ffffff;
+  --surface-muted: #f6f8fb;
+  --surface-raised: #fafbfc;
+  --surface-inset: #f1f4f8;
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-faint: #94a3b8;
+
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+
+  --success: #059669;
+  --success-soft: #ecfdf5;
+  --warning: #d97706;
+  --warning-soft: #fffbeb;
+  --danger: #dc2626;
+  --danger-soft: #fef2f2;
+  --info: #0284c7;
+  --info-soft: #f0f9ff;
+
+  --sidebar-bg: #111827;
+  --sidebar-surface: #1a2332;
+  --sidebar-border: rgba(255, 255, 255, 0.06);
+  --sidebar-text: #f1f5f9;
+  --sidebar-muted: #94a3b8;
+  --sidebar-hover: rgba(255, 255, 255, 0.06);
+  --sidebar-active: rgba(37, 99, 235, 0.14);
+  --sidebar-width: 256px;
+  --sidebar-collapsed-width: 76px;
+
+  --topbar-height: 64px;
+  --content-max-width: 1440px;
+  --content-padding-inline: 28px;
+
+  --control-height: 46px;
+  --control-height-sm: 40px;
+  --btn-height: 44px;
+  --btn-height-sm: 38px;
+  --tab-height: 42px;
+  --table-row-min: 68px;
+  --sidebar-item-height: 46px;
+  --icon-btn-size: 40px;
+  --avatar-size: 42px;
+
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 14px;
+
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+
+  --space-section: 22px;
+  --space-card: 20px;
+  --space-inline: 12px;
+  --space-controls: 14px;
+
+  --transition-fast: 120ms ease;
+  --transition-base: 180ms ease;
+
+  --topbar-bg: rgba(255, 255, 255, 0.94);
+  --overlay-bg: rgba(15, 23, 42, 0.45);
+  --modal-bg: #ffffff;
+  --table-row-hover: #fafbfd;
+  --switch-track: #cbd5e1;
+  --switch-thumb: #ffffff;
+  --skeleton-base: #eef2f7;
+  --skeleton-highlight: #f8fafc;
+  --spinner-track: #e2e8f0;
+
+  --tone-blue-bg: #eff6ff;
+  --tone-blue-fg: #2563eb;
+  --tone-green-bg: #ecfdf5;
+  --tone-green-fg: #16a34a;
+  --tone-orange-bg: #fff7ed;
+  --tone-orange-fg: #d97706;
+  --tone-red-bg: #fef2f2;
+  --tone-red-fg: #dc2626;
+  --tone-purple-bg: #f5f3ff;
+  --tone-purple-fg: #7c3aed;
+  --tone-yellow-bg: #fefce8;
+  --tone-yellow-fg: #ca8a04;
+
+  --alert-error-text: #991b1b;
+  --alert-error-border: #fecaca;
+  --alert-success-text: #166534;
+  --alert-success-border: #bbf7d0;
+  --alert-info-text: #1d4ed8;
+  --alert-info-border: #bfdbfe;
+  --alert-warning-text: #92400e;
+  --alert-warning-border: #fde68a;
+
+  --avatar-gradient-start: #eff6ff;
+  --avatar-gradient-end: #dbeafe;
+  --chart-track: var(--border-subtle);
+  --chart-active: #16a34a;
+  --chart-pending: #d97706;
+  --chart-inactive: #64748b;
+  --btn-secondary-hover: #eef2f7;
+  --danger-hover-bg: #fee2e2;
+  --auth-screen-bg:
+    radial-gradient(circle at 20% 8%, rgba(255, 255, 255, 0.14), transparent 42%),
+    radial-gradient(circle at 88% 92%, rgba(255, 255, 255, 0.08), transparent 38%),
+    linear-gradient(160deg, #9333ea 0%, #7c3aed 28%, #6366f1 55%, #2563eb 82%, #0284c7 100%);
+  --auth-card-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.55),
+    0 0 28px rgba(167, 139, 250, 0.35),
+    0 0 56px rgba(99, 102, 241, 0.22),
+    0 22px 48px rgba(30, 27, 75, 0.22);
+  --auth-card-glow:
+    radial-gradient(ellipse 85% 75% at 28% 18%, rgba(216, 180, 254, 0.75), transparent 58%),
+    radial-gradient(ellipse 75% 65% at 72% 82%, rgba(125, 211, 252, 0.6), transparent 52%),
+    radial-gradient(ellipse 95% 85% at 50% 50%, rgba(165, 180, 252, 0.5), transparent 62%);
+  --auth-brand-bg: var(--auth-screen-bg);
+
+  --scrollbar-thumb: rgba(100, 116, 139, 0.45);
+  --scrollbar-thumb-hover: rgba(100, 116, 139, 0.65);
+}

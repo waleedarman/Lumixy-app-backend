@@ -1,0 +1,34 @@
+{
+  "$schema": "https://www.schemastore.org/package.json",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "admin:build": "vite build",
+    "mobile:proxy": "node tools/dev-api-proxy.mjs",
+    "mobile:start": "npm --prefix Lumixy-App/Lumixy-App run start",
+    "mobile:start:proxy": "concurrently -n proxy,mobile \"npm run mobile:proxy\" \"npm run mobile:start\"",
+    "mobile:android": "npm --prefix Lumixy-App/Lumixy-App run android",
+    "mobile:ios": "npm --prefix Lumixy-App/Lumixy-App run ios",
+    "mobile:web": "npm --prefix Lumixy-App/Lumixy-App run web"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.5",
+    "concurrently": "^9.0.1",
+    "laravel-vite-plugin": "^2.0.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.18.2",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^6.0.2",
+    "vite": "^7.0.7"
+  },
+  "name": "TEST",
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "19.2.0"
+  }
+}

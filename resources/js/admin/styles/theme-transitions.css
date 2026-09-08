@@ -1,0 +1,36 @@
+html[data-theme-ready]:not([data-theme-init]) body,
+html[data-theme-ready]:not([data-theme-init]) .admin-sidebar,
+html[data-theme-ready]:not([data-theme-init]) .admin-topbar,
+html[data-theme-ready]:not([data-theme-init]) .admin-content,
+html[data-theme-ready]:not([data-theme-init]) .dash-panel,
+html[data-theme-ready]:not([data-theme-init]) .dash-kpi,
+html[data-theme-ready]:not([data-theme-init]) .dash-latest,
+html[data-theme-ready]:not([data-theme-init]) .surface-card,
+html[data-theme-ready]:not([data-theme-init]) .table-card,
+html[data-theme-ready]:not([data-theme-init]) .modal-card,
+html[data-theme-ready]:not([data-theme-init]) .account-settings-surface,
+html[data-theme-ready]:not([data-theme-init]) .auth-layout__panel,
+html[data-theme-ready]:not([data-theme-init]) .field input,
+html[data-theme-ready]:not([data-theme-init]) .field select,
+html[data-theme-ready]:not([data-theme-init]) .field textarea,
+html[data-theme-ready]:not([data-theme-init]) .btn,
+html[data-theme-ready]:not([data-theme-init]) .ui-btn,
+html[data-theme-ready]:not([data-theme-init]) .ui-icon-btn,
+html[data-theme-ready]:not([data-theme-init]) .data-table tbody tr,
+html[data-theme-ready]:not([data-theme-init]) .notify-compose__panel,
+html[data-theme-ready]:not([data-theme-init]) .notify-compose__preview {
+  transition:
+    background-color 200ms ease,
+    background 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.theme-toggle svg {
+  transition: transform 200ms ease, color 200ms ease;
+}
+
+.theme-toggle:hover svg {
+  transform: rotate(-8deg);
+}

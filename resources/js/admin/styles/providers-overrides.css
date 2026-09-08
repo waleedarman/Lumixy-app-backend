@@ -1,0 +1,280 @@
+/* Providers table: subscription card, renew button, smooth featured toggle */
+
+:root {
+  --featured-accent: #ca8a04;
+}
+
+/* ─── Featured provider — subtle, no gradients ─── */
+.entity-header.is-featured,
+.provider-header.is-featured {
+  border-inline-start: 3px solid var(--featured-accent);
+}
+
+.entity-header__avatar.is-featured {
+  box-shadow: 0 0 0 2px var(--featured-accent);
+}
+
+.providers-table__row.is-featured > td:first-child {
+  border-inline-start: 3px solid var(--featured-accent);
+}
+
+.providers-table__avatar.is-featured {
+  box-shadow: 0 0 0 2px var(--featured-accent);
+}
+
+.providers-table__name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dash-provider-row.is-featured > td:first-child {
+  border-inline-start: 3px solid var(--featured-accent);
+}
+
+.dash-provider-row__avatar.is-featured {
+  box-shadow: 0 0 0 2px var(--featured-accent);
+}
+
+.dash-provider-row__name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.providers-table__subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.providers-table__sub-badge.is-success {
+  background: var(--success-soft);
+  color: var(--success);
+  border: 1px solid color-mix(in srgb, var(--success) 28%, transparent);
+}
+
+.providers-table__sub-badge.is-warning {
+  background: var(--warning-soft);
+  color: var(--warning);
+  border: 1px solid color-mix(in srgb, var(--warning) 28%, transparent);
+}
+
+.providers-table__sub-badge.is-neutral {
+  background: var(--surface-muted);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.providers-table__sub-date--success,
+.providers-table__sub-date--warning {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--warning);
+}
+
+.providers-table__sub-date--danger {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--danger);
+}
+
+.providers-table__sub-days {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.providers-table__sub-days.is-warning {
+  color: var(--warning);
+  font-weight: 600;
+}
+
+.providers-table__sub-date--expired {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--danger);
+}
+
+.providers-table__expired-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 4px 4px 4px 8px;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border-subtle);
+}
+
+.providers-table__sub-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.providers-table__sub-badge.is-danger {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border: 1px solid color-mix(in srgb, var(--danger) 28%, transparent);
+}
+
+.providers-table__renew-btn {
+  flex-shrink: 0;
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--primary);
+  cursor: pointer;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--primary) 35%, transparent);
+  transition:
+    transform 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.providers-table__renew-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--primary) 45%, transparent);
+}
+
+.providers-table__renew-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-ring);
+}
+
+.providers-table__renew-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.providers-table__renew-btn.is-loading svg {
+  animation: providers-renew-spin 0.75s linear infinite;
+}
+
+@keyframes providers-renew-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.switch--smooth {
+  transform: none !important;
+  cursor: pointer;
+}
+
+.switch--smooth.switch--disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.switch--smooth:not(.switch--disabled):hover span {
+  background: color-mix(in srgb, var(--primary) 20%, var(--border-strong));
+}
+
+.switch--smooth:not(.switch--disabled):active span::before {
+  width: 22px;
+}
+
+.switch--smooth span {
+  transition: background 450ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.switch--smooth span::before {
+  transition:
+    transform 450ms cubic-bezier(0.34, 1.2, 0.64, 1),
+    box-shadow 450ms cubic-bezier(0.4, 0, 0.2, 1),
+    width 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+  will-change: transform;
+}
+
+.switch--smooth input:checked + span::before {
+  box-shadow: 0 2px 10px color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+.switch--smooth input:disabled + span {
+  opacity: 0.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .providers-table__renew-btn {
+    transition-duration: 120ms;
+  }
+
+  .switch--smooth span,
+  .switch--smooth span::before {
+    transition-duration: 120ms;
+  }
+}
+
+.route-fallback {
+  display: grid;
+  gap: 14px;
+  padding-block: 8px;
+}
+
+.route-fallback__title {
+  height: 28px;
+  width: min(240px, 70%);
+}
+
+.route-fallback__toolbar {
+  height: 44px;
+  width: 100%;
+}
+
+.route-fallback__body {
+  height: min(420px, 55vh);
+  width: 100%;
+}
+
+.auth-route-fallback {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.providers-table-skeleton {
+  height: min(420px, 55vh);
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.dash-section-skeleton {
+  display: grid;
+  gap: 12px;
+}
+
+.dash-section-skeleton--kpi {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.dash-section-skeleton__kpi-card {
+  height: 96px;
+}
+
+.dash-section-skeleton__panel {
+  height: 220px;
+  border-radius: var(--radius-lg);
+}
+
+.dash-section-skeleton__table {
+  height: 280px;
+  border-radius: var(--radius-lg);
+}
